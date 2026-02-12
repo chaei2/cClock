@@ -106,6 +106,7 @@ textarea:not([rows]) {
 
 body {
   background-color: rgb(20, 6, 0);
+  cursor: url(../source/img2/hand.svg), default;
 }
 
 .container {
@@ -164,8 +165,11 @@ body {
   height: 100px;
 }
 
-.imges2 {
+input.imges2 {
+  background: url(../source/img2/devil.svg);
+  border: none;
+  cursor: pointer;
   filter: blur(0.2px);
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
