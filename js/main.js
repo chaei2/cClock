@@ -27,9 +27,10 @@ const IMGS = {
 
 let tileImgs = [];
 
+// 해치웠나?
 function preload() {
   for (let n = 0; n <= 9; n++) {
-    tileImgs[n] = loadImage(`source/img/${n}.png`);
+    tileImgs[n] = loadImage(`./source/img/${n}.png`);
   }
 }
 
