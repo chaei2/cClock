@@ -1,0 +1,33 @@
+:root {
+  // color
+
+  // --primary:;
+  // --primary:;
+  // --primary:;
+  // --primary:;
+  // --primary:;
+
+  --bg: linear-gradient(
+    180deg,
+    rgba(51, 15, 0, 1) 0%,
+    rgba(153, 46, 0, 1) 38%,
+    rgba(51, 15, 0, 1) 82%,
+    rgba(20, 6, 0, 1) 100%
+  );
+
+  --gradientBtn: linear-gradient(
+    180deg,
+    rgba(134, 0, 0, 1) 0%,
+    rgb(188, 3, 3) 50%,
+    rgb(78, 0, 0) 100%
+  );
+
+  --gradientBox: linear-gradient(
+    180deg,
+    rgba(91, 29, 0, 1) 0%,
+    rgba(170, 77, 10, 1) 48%,
+    rgba(91, 29, 0, 1) 100%
+  );
+
+  // --font1:;
+}

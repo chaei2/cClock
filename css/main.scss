@@ -1,0 +1,81 @@
+@use './reset';
+@use './setRoot';
+
+body {
+  background-color: rgba(20, 6, 0, 1);
+}
+
+.container {
+  min-width: 50rem;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  // 스크롤이 생기지 않게 하는 방법이 뭐냐..
+  margin-inline: auto;
+  @at-root *:has(#{&}) {
+    align-content: center;
+  }
+
+  padding: 30px 30px 50px 30px;
+
+  // .box1
+  .box1 {
+    box-shadow: 0px 4px 4px 14px rgba(0, 0, 0, 0.25);
+    // 드랍 섀도우 쓰면 원하는 느낌 안남.
+    width: 100%;
+    height: 80vh;
+    border-radius: 15px;
+    background: var(--gradientBox);
+    padding: 30px;
+  }
+
+  // .box2
+  div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+}
+#canvas-container {
+  // min-width: 893px;
+  max-height: 1rem;
+}
+
+// .canvas {
+//   display: block;
+// }
+
+.primary {
+  color: var(--gradientBtn);
+}
+
+.bg {
+  // width: 1440px;
+  // height: 1054px;
+  background: var(--bg);
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  background: var(--gradientBtn);
+  border: none;
+  color: rgba(0, 0, 0, 0);
+
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0px 10px 4px 14px rgba(0, 0, 0, 0.25);
+}
+.imges1 {
+  filter: blur(1px);
+  width: 500px;
+  height: 100px;
+}
+
+.imges2 {
+  filter: blur(0.2px);
+  width: 150px;
+  height: 150px;
+}
