@@ -29,7 +29,7 @@ let tileImgs = [];
 
 function preload() {
   for (let n = 0; n <= 9; n++) {
-    tileImgs[n] = loadImage(`../source/img/${n}.png`);
+    tileImgs[n] = loadImage(`source/img/${n}.png`);
   }
 }
 
