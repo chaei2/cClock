@@ -3,11 +3,14 @@
 
 body {
   background-color: rgba(20, 6, 0, 1);
-  cursor: url(../source/img2/hand2.svg), default;
+
+  cursor: none;
+  // cursor: url('source/img2/hand2.svg'), default;
 }
 
 .container {
   min-width: 50rem;
+  // min-height: 0rem;
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -66,20 +69,41 @@ body {
   color: rgba(0, 0, 0, 0);
 
   border-radius: 50%;
-  cursor: grab;
+  cursor: none;
   box-shadow: 0px 10px 4px 14px rgba(0, 0, 0, 0.25);
 }
+
+.btn:active {
+  scale: 90%;
+  box-shadow: 0px 10px 4px 14px rgba(0, 0, 0, 0.45);
+}
+
 .imges1 {
   filter: blur(1px);
   width: 500px;
   height: 100px;
 }
 
-input.imges2 {
+input.imgesBtn2 {
   background: url(../source/img2/devil.svg);
   border: none;
-  cursor: pointer;
+  cursor: none;
   filter: blur(0.2px);
   width: 100px;
   height: 100px;
+}
+.imgesBtn2:active {
+  scale: 90%;
+}
+
+.cur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px; /* 이미지 크기 조절 */
+  height: auto;
+  pointer-events: none; /* 클릭 방해 금지 */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  // mix-blend-mode: overlay;
 }

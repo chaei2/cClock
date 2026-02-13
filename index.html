@@ -8,8 +8,12 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script> -->
 
     <link rel="stylesheet" href="./css/main.css" />
+
     <script src="./js/main.js" defer></script>
+
     <script src="./js/sound.js" defer></script>
+
+    <script src="./js/cursor.js" defer></script>
 
     <title>clock</title>
   </head>
@@ -28,23 +32,23 @@
 
         <!-- 악마 웃음 -->
         <div>
-          <input type="button" class="imges2" />
+          <input type="button" class="imgesBtn2" id="imgesBtn" />
 
-          <!-- <img src="./source/img2/devil.svg" alt="devil" /> -->
+          <!-- <img id="imgesBtn" src="./source/img2/devil.svg" alt="devil" /> -->
 
-          <!-- 
           <audio
-            class="devilSound"
+            id="devilSound"
             src="./source/sound/devil.mp3"
             type="audio/mpeg"
-          ></audio> -->
+          ></audio>
         </div>
 
         <div>
-          <button class="btn primary">press</button>
+          <button class="btn primary" onclick="play()">press</button>
 
           <audio
             class="gameBtnSound"
+            id="btnSound"
             src="./source/sound/gameStart.mp3"
             type="audio/mpeg"
           ></audio>
@@ -52,6 +56,6 @@
       </div>
     </div>
 
-    <div id="custom-cursor"></div>
+    <img class="cur" src="./source/img2/hand2.svg" alt="hand" />
   </body>
 </html>

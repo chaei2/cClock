@@ -65,9 +65,9 @@ function draw() {
   let h1 = Number(hh[0]); // '0' → 0
   let h2 = Number(hh[1]); // '9' → 9
   tint(50, 0, 0, 150);
-  image(tileImgs[h1], -160, 0);
+  image(tileImgs[h1], -185, 0);
 
-  image(tileImgs[h2], 160, 0);
+  image(tileImgs[h2], 135, 0);
 
   let m1 = Number(mm[0]); // 십의 자리
   let m2 = Number(mm[1]); // 일의 자리
