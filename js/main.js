@@ -1,6 +1,9 @@
 const canvasContainer = document.getElementById('canvas-container');
 let renderer;
 
+// pushBtn은 아래 있음
+const gameEndSound = new Audio('./source/sound/gameEnd.mp3');
+
 const INITIAL_W = 2000;
 const INITIAL_H = 650;
 const INITIAL_RATIO = INITIAL_W / INITIAL_H;
@@ -160,6 +163,9 @@ pushBtn.addEventListener('click', () => {
   setTimeout(() => {
     startDropping = false;
     hY1 = hY2 = mY1 = mY2 = sY1 = sY2 = 0;
+
+    gameEndSound.currentTime = 0;
+    gameEndSound.play();
   }, 3200);
 });
 
@@ -196,7 +202,7 @@ function mousePressed() {
     mouseY >= 0 &&
     mouseY <= INITIAL_H
   ) {
-    bgColor2 = '#000ac5';
+    bgColor2 = '#000bd3';
     mDropping = true;
     // 바꾸고 싶은 색
 
