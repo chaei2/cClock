@@ -134,7 +134,7 @@ function draw() {
 
 function mousePressed() {
   // 색 바꾸기
-
+  // --------------------헷깔리니깐
   // hh
   if (
     mouseX >= 0 &&
@@ -203,4 +203,7 @@ function mousePressed() {
       sY2 = 0;
     }, 3000);
   }
+
+  // --------------------헷깔리니깐
+  
 }
