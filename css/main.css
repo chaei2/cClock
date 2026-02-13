@@ -196,7 +196,7 @@ input.imgesBtn2 {
 }
 
 .imgesBtn2:active {
-  transform: translate(-500%, -400%) scale(7) rotate(360deg);
+  transform: translate(-450%, -400%) scale(6.5) rotate(360deg);
   position: relative;
   transition: 0.3s;
   z-index: 10;

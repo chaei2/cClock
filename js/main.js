@@ -7,6 +7,10 @@ const INITIAL_RATIO = INITIAL_W / INITIAL_H;
 
 // 맥 키보드 백콤 쓰는법-> 한영키 + ₩키 동시에 누름됨
 
+let bgColor1 = '#6C1B00';
+let bgColor2 = '#003C70';
+let bgColor3 = '#777300';
+
 let reH = null;
 let reM = null;
 let reS = null;
@@ -48,13 +52,13 @@ function setup() {
 }
 
 function draw() {
-  background('#777300');
+  background(bgColor3);
   noStroke();
 
-  fill('#6C1B00');
+  fill(bgColor1);
   rect(0, 0, INITIAL_W / 3, INITIAL_H);
 
-  fill('#003C70');
+  fill(bgColor2);
   rect(INITIAL_W / 3, 0, INITIAL_W / 3, INITIAL_H);
 
   const hh = String(hour()).padStart(2, '0');
@@ -80,4 +84,51 @@ function draw() {
 
   image(tileImgs[s1], 1165, 0);
   image(tileImgs[s2], 1470, 0);
+}
+
+function mousePressed() {
+  // 색 바꾸기
+  if (
+    mouseX >= 0 &&
+    mouseX <= INITIAL_W / 3 &&
+    mouseY >= 0 &&
+    mouseY <= INITIAL_H
+  ) {
+    bgColor1 = '#FF0000';
+
+    // 2초 후 원래 색으로 복귀
+    setTimeout(() => {
+      bgColor1 = '#6C1B00';
+    }, 1000);
+  }
+
+  if (
+    mouseX >= INITIAL_W / 3 &&
+    mouseX <= (INITIAL_W / 3) * 2 &&
+    mouseY >= 0 &&
+    mouseY <= INITIAL_H
+  ) {
+    bgColor2 = '#000ac5';
+    // 바꾸고 싶은 색
+
+    // 2초 후 원래 색으로 복귀
+    setTimeout(() => {
+      bgColor2 = '#003C70';
+    }, 1000);
+  }
+
+  if (
+    mouseX >= (INITIAL_W / 3) * 2 &&
+    mouseX <= INITIAL_W &&
+    mouseY >= 0 &&
+    mouseY <= INITIAL_H
+  ) {
+    bgColor3 = '#d4cd01';
+    // 바꾸고 싶은 색
+
+    // 2초 후 원래 색으로 복귀
+    setTimeout(() => {
+      bgColor3 = '#777300';
+    }, 1000);
+  }
 }
