@@ -22,7 +22,12 @@
     rgb(78, 0, 0) 100%
   );
 
-  --gradientBtnActive: 
+  --gradientBtnActive: linear-gradient(
+    180deg,
+    rgba(92, 0, 0, 1) 0%,
+    rgba(130, 0, 0, 1) 48%,
+    rgba(92, 0, 0, 1) 100%
+  );
 
   --gradientBox: linear-gradient(
     180deg,
