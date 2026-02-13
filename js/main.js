@@ -29,6 +29,8 @@ let hDropping = false;
 let mDropping = false;
 let sDropping = false;
 
+let startDropping = false;
+
 // 맥 키보드 백콤 쓰는법-> 한영키 + ₩키 동시에 누름됨
 
 let bgColor1 = '#6C1B00';
@@ -130,7 +132,36 @@ function draw() {
 
   image(tileImgs[s1], sX1, sY1);
   image(tileImgs[s2], sX2, sY2);
+
+  if (startDropping) {
+    hY1 += 93;
+    hY2 += 93;
+    mY1 += 102;
+    mY2 += 102;
+    sY1 += 85;
+    sY2 += 85;
+
+    // 화면 밖으로 나가면 초기화
+    if (hY1 > INITIAL_H) hY1 = -325;
+    if (hY2 > INITIAL_H) hY2 = -325;
+    if (mY1 > INITIAL_H) mY1 = -325;
+    if (mY2 > INITIAL_H) mY2 = -325;
+    if (sY1 > INITIAL_H) sY1 = -325;
+    if (sY2 > INITIAL_H) sY2 = -325;
+  }
 }
+
+// 버튼 클릭 이벤트
+const pushBtn = document.getElementById('pushBtn');
+pushBtn.addEventListener('click', () => {
+  startDropping = true; // 버튼 누르면 애니메이션 시작
+
+  // 3초 후 멈추고 초기 위치 복귀
+  setTimeout(() => {
+    startDropping = false;
+    hY1 = hY2 = mY1 = mY2 = sY1 = sY2 = 0;
+  }, 3200);
+});
 
 function mousePressed() {
   // 색 바꾸기
@@ -205,5 +236,4 @@ function mousePressed() {
   }
 
   // --------------------헷깔리니깐
-  
 }
