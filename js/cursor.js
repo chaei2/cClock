@@ -1,4 +1,6 @@
-const cursor = document.querySelector('.cur'); // 커서 이미지 요소
+const cursor = document.querySelector('.cur');
+
+const clickDownSound = document.getElementById('clickDownSound');
 
 document.addEventListener('mousemove', (e) => {
   cursor.style.left = e.clientX + 'px';
@@ -7,6 +9,9 @@ document.addEventListener('mousemove', (e) => {
 
 document.addEventListener('mousedown', () => {
   cursor.src = './source/img2/hand3.svg';
+
+  clickDownSound.currentTime = 0;
+  clickDownSound.play();
 });
 
 // 떼면 (놓기)

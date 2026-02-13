@@ -6,6 +6,8 @@ function play() {
   devilSound.pause();
   devilSound.currentTime = 0;
 
+  clickDownSound.pause();
+
   // 게임 소리
   gameSound.currentTime = 0;
   gameSound.play();
@@ -18,6 +20,8 @@ document.getElementById('imgesBtn').addEventListener('click', () => {
   // 다른 소리 끄기
   gameSound.pause();
   gameSound.currentTime = 0;
+
+  clickDownSound.pause();
 
   // 악마 소리
   devilSound.currentTime = 0;

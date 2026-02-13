@@ -97,6 +97,7 @@ textarea:not([rows]) {
     rgb(188, 3, 3) 50%,
     rgb(78, 0, 0) 100%
   );
+  --gradientBtnActive:
   --gradientBox: linear-gradient(
     180deg,
     rgba(91, 29, 0, 1) 0%,
@@ -163,6 +164,7 @@ body {
 .btn:active {
   scale: 90%;
   box-shadow: 0px 10px 4px 14px rgba(0, 0, 0, 0.45);
+  background-color: var();
 }
 
 .imges1 {
@@ -188,7 +190,7 @@ input.imgesBtn2 {
   position: fixed;
   left: 0;
   top: 0;
-  width: 50px; /* 이미지 크기 조절 */
+  width: 100px; /* 이미지 크기 조절 */
   height: auto;
   pointer-events: none; /* 클릭 방해 금지 */
   transform: translate(-50%, -50%);
