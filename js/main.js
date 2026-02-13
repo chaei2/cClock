@@ -5,6 +5,16 @@ const INITIAL_W = 2000;
 const INITIAL_H = 650;
 const INITIAL_RATIO = INITIAL_W / INITIAL_H;
 
+// y에 떨어지는 속도를 줄거라 일ㅂ러 따로 뻄
+let hY1 = -185;
+let hY2 = 135;
+
+let mY1 = 495;
+let mY2 = 800;
+
+let sY1 = 1165;
+let sY2 = 1470;
+
 // 맥 키보드 백콤 쓰는법-> 한영키 + ₩키 동시에 누름됨
 
 let bgColor1 = '#6C1B00';
@@ -69,21 +79,21 @@ function draw() {
   let h1 = Number(hh[0]); // '0' → 0
   let h2 = Number(hh[1]); // '9' → 9
   tint(50, 0, 0, 150);
-  image(tileImgs[h1], -185, 0);
+  image(tileImgs[h1], hY1, 0);
 
-  image(tileImgs[h2], 135, 0);
+  image(tileImgs[h2], hY2, 0);
 
   let m1 = Number(mm[0]); // 십의 자리
   let m2 = Number(mm[1]); // 일의 자리
 
-  image(tileImgs[m1], 495, 0);
-  image(tileImgs[m2], 800, 0);
+  image(tileImgs[m1], mY1, 0);
+  image(tileImgs[m2], mY2, 0);
 
   let s1 = Number(ss[0]); // 십의 자리
   let s2 = Number(ss[1]); // 일의 자리
 
-  image(tileImgs[s1], 1165, 0);
-  image(tileImgs[s2], 1470, 0);
+  image(tileImgs[s1], sY1, 0);
+  image(tileImgs[s2], sY2, 0);
 }
 
 function mousePressed() {
