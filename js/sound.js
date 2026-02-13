@@ -13,7 +13,7 @@ function play() {
   gameSound.play();
 }
 
-document.getElementById('imgesBtn').addEventListener('click', () => {
+document.getElementById('imgesBtn').addEventListener('mouseenter', () => {
   const gameSound = document.getElementById('btnSound');
   const devilSound = document.getElementById('devilSound');
 

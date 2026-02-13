@@ -101,9 +101,11 @@ input.imgesBtn2 {
   scale: 90%;
 }
 .imgesBtn2:active {
-  transform: rotate(360deg);
-  scale: 140%;
-  transition: 0.6s;
+  transform: translate(-500%, -400%) scale(7) rotate(360deg);
+  position: relative;
+
+  transition: 0.3s;
+  z-index: 10;
 }
 
 .cur {
@@ -115,5 +117,6 @@ input.imgesBtn2 {
   pointer-events: none; /* 클릭 방해 금지 */
   transform: translate(-50%, -50%);
   z-index: 9999;
+
   // mix-blend-mode: overlay;
 }

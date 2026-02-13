@@ -1,7 +1,7 @@
 const buttonPush = document.getElementById('imgesBtn');
 const box1 = document.querySelector('.box1');
 
-buttonPush.addEventListener('click', colorChange);
+buttonPush.addEventListener('mouseenter', colorChange);
 
 function colorChange() {
   // alert('hi');
